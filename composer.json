@@ -1,29 +1,22 @@
 {
-  "name": "payments/ingenico-demo",
-  "description": "Demo Application for the Ingenico PHP SDK",
+  "name": "payments/braintree-demo",
+  "description": "Demo Application for the Braintree PHP SDK",
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "IngenicoDemo\\": "src/"
+      "BraintreeDemo\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "IngenicoDemo\\": "tests/"
+      "BraintreeDemo\\": "tests/"
     }
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/Ingenico-ePayments/connect-sdk-php.git"
-    }
-  ],
   "require": {
     "php": ">=5.5.9",
-    "ingenico-epayments/connect-sdk-php": "^2.0"
+    "braintree/braintree_php": "^3.17"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.6"
   }
 }
-
