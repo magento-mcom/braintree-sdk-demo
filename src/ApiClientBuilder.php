@@ -4,7 +4,9 @@
 namespace BraintreeDemo;
 
 use Braintree\Configuration;
+use Braintree\ResourceCollection;
 use Braintree\Transaction;
+use Braintree\TransactionSearch;
 
 class ApiClientBuilder
 {
@@ -46,6 +48,16 @@ class ApiClientBuilder
         $transaction = Transaction::find($transactionID);
 
         return $transaction;
+    }
+
+    /**
+     * @param \DateTime $dateTime
+     * @return ResourceCollection
+     */
+    public function searchTransactionsSettledAfter(\DateTime $dateTime)
+    {
+        $this->setConfig();
+        return Transaction::search([TransactionSearch::settledAt()->greaterThanOrEqualTo($dateTime)]);
     }
 
     private function setConfig()
