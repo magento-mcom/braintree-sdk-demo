@@ -24,3 +24,11 @@ To refund a transaction that has already settled (creates a new transaction stat
 ```php retrieveTransaction.php```
 
 To see the status of a transaction.
+
+```php searchTransactions.php```
+
+To search for transactions settled after yesterday
+
+```php searchTransactions.php dd-mm-yyyy```
+
+To search for transactions settled after the date passed in
