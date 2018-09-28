@@ -1,6 +1,10 @@
 # braintree-sdk-demo
 Braintree SDK Demo Application
 
+After checkout, go into braintree-sdk-demo folder and execute ```composer install```
+
+
+
 ```php createTransaction.php```
 
 Creates a new transaction in "Authorized", "Processor declined", "Gateway rejected" or "Failed" status.
